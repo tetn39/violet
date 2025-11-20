@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* メモとか色とか */
+/* ヘッダ#000000
+メイン文字#efeed9
+目立たせる文字#b4832f 
+参考：https://wakupaku.hmup.jp/blog/blog/design-anime-violetevergarden
+透明感ある感じに仕上げる？？
+*/
+
+
+
+/* index, chars違い　bodyのclass mainのclassと中身
+navのclassと配置
+
+*/
+
+
+
+/* 全体共通 */
+* {box-sizing: border-box;}
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+@font-face{
+  font-family: 'Special-Elite';
+  src: url("../font/SpecialElite-Regular.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'Shippori';
+  src: url("../font/ShipporiMincho-Regular.ttf") format("truetype");
+}
+
+
+/* all contents */
+html{
+  scroll-behavior: smooth; /* 滑らかに上に戻る */
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium","游ゴシック", "Yu Gothic", sans-serif;}
+
+body,h1,h2,h3,p,ul,ol{
+  margin: 0;
+  padding: 0;
+}
+*{box-sizing:border-box} /* widthを指定したときにpaddingとmarginを無視する*/
+
+p{font-size: 18px;
+line-height: 2;}
+img{vertical-align: bottom;}
+a{
+  text-decoration: none;
+}
+
+/* ページごとの大きな設定 index,all*/
+.index-body{
+  background-image: url(../images/introBg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  max-height: 1910px;
+}
+
+.body-div{
+  display: flex;
+  margin: auto;
+}
+
+.index-body header{
+  width: 300px;
+  height: 1000px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.logo{
+  width: 250px;
+  margin: 20px;
+}
+
+.main-menu ul li a{
+  color: #b3a59a;
+  font-weight: bold;
+  display: block;
+  padding: 20px;
+  margin: 20px 0;
+  transition: ease 0.5s;
+  position: relative;
+  font-family: 'Special-Elite';
+}
+  
+.main-menu ul li a::after{
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.5s;
+}
+
+.main-menu ul li a:hover::after{
+  transform: scale(1, 1);
+}
+
+.main-menu ul li a:hover{
+  color: #000;
+}
+
+footer{
+  text-align: center;
+  background-color: #fff;
+}
+
+footer p{
+vertical-align: middle;
+padding: 20px 0;
+}
+
+.bill{
+  background-image: url(../images/billingBg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+}
+
+.kyoani img{
+  margin-top: 20px;
+  width: 200px;
+}
+
+/* ページごとの大きな設定chars */
+.chars-body{
+  background-color: #b3a59a;
+  /* background-image: url(../images/bg_sp.jpg); */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.chars-body-div{
+  background-color: #b3a59a;;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+
+.chars-body div header{
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+  height: 80px;
+}
+
+.chars-menu ul{
+  display: flex;
+}
+
+.chars-menu ul li a{
+  color: #b3a59a;
+  font-weight: bold;
+  display: block;
+  padding: 20px;
+  margin: 10px 0 20px 0;
+  transition: ease 0.5s;
+  position: relative;
+  font-family: 'Special-Elite';
+}
+  
+.chars-menu ul li a::after{
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -1px;
+  transform: scale(0, 1);
+  /* transform-origin: left top; */
+  transition: transform 0.5s;
+}
+.chars-menu ul li a:hover::after{
+  transform: scale(1, 1);
+}
+
+.chars-menu ul li a:hover{
+  color: #000;
+}
+
+/* index 内容 */
+
+.slide-div{
+  width:100%
+}
+
+.index-main{
+  text-align: center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+.index-text-div h1{
+  color: #b4832f;
+}
+
+.index-text-div p{
+  margin: 60px 0;
+  font-size: 20px;
+  white-space: nowrap;
+  color: #000 ;
+}
+
+.index-text-div{
+  height: 1300px;
+}
+
+.nav-no-younamono{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.nav-no-younamono section{
+  padding: 0 10px 20px 10px;
+  width: 540px;
+  min-width: 500px;
+}
+
+.nav-no-younamono section a h2{
+  font-family: 'Special-Elite';
+  padding: 20px 0 10px 0;
+  color: #000;
+}
+
+.for-zoom img{
+  width: 50%;
+  min-width: 500px;
+  transition: 1s all;
+}
+
+.for-zoom{
+  width: 50%;
+  min-width: 500px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.nav-no-younamono section a div img:hover{
+  transform: scale(1.15,1.15); /* 2つ指定するのは横と縦の倍率 */
+  transition: 1s all;
+}
+
+/* スライドして表示するやつ(index) */
+.sl{
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.show{
+  opacity: 1;
+  transform: none;
+}
+
+.up{
+  transform: translate(0, 100px);
+}
+
+/* chars 内容 */
+.chars-main{
+  background-image: url(../images/bg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 30px;
+}
+
+.chars-main h1{
+  font-family: 'Special-Elite';
+  color: #b4832f;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 40px;
+  width: 225px;
+}
+
+.chars-big{
+  margin: auto;
+  width: 860px;
+  position: relative;
+  padding: 30px 0 20px 30px;
+}
+
+.chars-big h2{
+  color: #000;
+  font-family: 'Shippori';
+}
+.chars-big img{
+  width: 800px;
+  min-width: 500px;
+}
+
+.violet{
+  position: absolute;
+  top: 85px;
+  left: 441px;
+  line-height: 30px;
+  margin-right: 0;
+  width: 380px;
+  height: 380px;
+}
+
+.shosa{
+  width: 400px;
+  position: absolute;
+  top: 85px;
+  left: 45px;
+  line-height: 30px;
+  margin-right: 0;
+  height: 380px;
+}
+
+.chars-normal{
+  padding: 0 0 20px 30px;
+  width: 530px;
+}
+
+.chars-normal h2{
+  color: #000;
+  font-family: 'Shippori';
+}
+
+.chars-normal img{
+  width: 500px;
+}
+
+.chars-normal p{
+  padding: 10px 10px;
+  line-height: 30px
+}
+.flex-only{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* story 内容 */
+.story-main{
+  background-image: url(../images/bg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.story-title{
+  font-family: 'Special-Elite';
+  color: #b4832f;
+  padding: 30px 0 ;
+  margin: auto;
+  font-size: 40px;
+  width: 120px;
+}
+
+.story-sub-title{
+  font-family: 'Shippori';
+  color: #000;
+  text-align: center;
+}
+
+.taisetunahito{
+  font-family: 'Shippori';
+  text-align: center;
+  margin-top: 50px;
+}
+
+.story-contents{
+  max-width: 740px;
+  width: auto;
+  margin: 0px auto 0px auto;
+  padding: 90px 30px;
+  text-align: center;
+}
+/* 色系 */
+.red{
+  color: #f08080;
+  font-weight: bold;
+}
+
+
+/* jQuery スライド */
+.slideshow {
+  margin: 0 0 10px 0;
+	position:relative;
+	width:100%;
+	height:1500px;
+	overflow:hidden;}
+
+.slideshow img {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:10;
+  width: 95%;
+  min-width: 720px;
+  padding: 0 0 0 30px;}
+
+.slideshow img.active {z-index:30; }
+
+.slideshow img.last-active {z-index:20; }
+
+
+/* 上に戻る */
+
+.gotop{
+  display: block;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: #fff;
+  /* border: 1px solid #999; */
+  border-radius: 10px;
+  padding-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  font-size: 85%;
+  text-decoration: none;
+  color: #333;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  transition: 0.5s ease;
+}
+.gotop::before{
+  content: "^";
+  display: block;
+  font-size: 30px;
+  top: 5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+.gotop:hover{
+  opacity: 1;
+  border: 1px solid #999;
+}
